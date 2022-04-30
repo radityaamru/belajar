@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #7FB5FF;
+}
+/* HEADER */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #001D6E;
+}
+nav h1 {
+    color: white;
+    margin: 10px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 40%;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #FEFBE7;
+}
+nav ul li a:hover {
+    color: #d8d5bd;
+}
+/* profile */
+main .prof {
+    width: 30px;
+    position: absolute;
+    left: 90px;
+    border-bottom: 1px solid white;
+}
+main input {
+    position: absolute;
+    width: 60px;
+    height:42px;
+    opacity: 0;
+    left: 72px;
+    top: 95px;
+    z-index: 2;
+}
+main input:hover {
+    cursor: pointer;
+}
+main input:checked ~ aside{
+    display: flex;
+}
+/* aside */
+aside{
+    width: fit-content;
+    display: none;
+    justify-content:flex-end;
+    position: absolute;
+    right: 0;
+    top: 49px;
+    padding-left: 20px;
+    background-color: #001D6E;
+}
+aside img{
+    width: 70px;
+    margin: 10px auto;
+}
+aside h1 {
+    color: white;
+    font-family: 'Lemonada', cursive;
+    margin-left: 9px;
+}
+/* Main */
+main {
+    padding: 0 40px;
+    background-color: #C4DDFF;
+    width: 1100px;
+    margin: 1px auto;
+}
+/* Article */
+hr {
+    margin: 10px;
+}
+.judul h2,h3{
+    color: #424d50;
+    margin-top: 50px;
+    font-family: 'Space Mono', monospace;
+}
+.judul p {
+    margin: 25px auto ;
+    font-family: 'Space Mono', monospace;
+}
+.judul .tempo-img {
+    display:inline-flex;
+    justify-content: space-around;
+    height: 200px;
+    width: 500px
+}
+/* Footer */
+footer {
+    background-color: #001D6E;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+footer h4{
+    color: white;
+    margin-top: 10px;
+}
+/* Responsive Breakpoint */
+@media screen and (max-width: 576px) {
+    body {
+        overflow-x: hidden
+    }
+    /* Nav */
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-top: 10px;
+    }
+    nav ul li {
+        font-size: 14px;
+        border-left:1px solid white ;
+        padding: 0 5px 0 5px;
+    }
+    /* Profile */
+    main .prof,input {
+        display: none;
+    }
+    /* Main */
+    main {
+        width: 100%;
+        padding: 0 50px 0 10px;
+    }
+}
